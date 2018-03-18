@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Strings used for identification. They are "internal" in the sense that the user can't see them.-->
+<resources>
+    <public name="piri_dialogs_messageArgument" type="string"/>
+    <string name="piri_dialogs_messageArgument" translatable="false">messageArgument</string>
+    <public name="piri_dialogs_hintArgument" type="string"/>
+    <string name="piri_dialogs_hintArgument" translatable="false">hintArgument</string>
+</resources>

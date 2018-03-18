@@ -1,0 +1,1 @@
+include ':piridialogs', ':pirifragments-release', ':piripreferences'

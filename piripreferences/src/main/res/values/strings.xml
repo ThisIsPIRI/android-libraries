@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">PIRI Preferences</string>
+    <string name="naturalNumberSmallerThan" formatted="false">%s must be natural number smaller than %d.</string>
+</resources>
