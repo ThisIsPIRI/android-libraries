@@ -11,4 +11,7 @@
     <declare-styleable name="Number">
         <attr name="imposeScreenLimit" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="Credits">
+		<attr name="text" format="string"/>
+	</declare-styleable>
 </resources>
