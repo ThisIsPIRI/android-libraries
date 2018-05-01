@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="piri_dialogs_cancel">취소</string>
-    <string name="piri_dialogs_confirm">확인</string>
-    <string name="piri_dialogs_selectColor">색을 선택하세요</string>
-    <string name="piri_dialogs_agree">동의</string>
-    <string name="piri_dialogs_reject">거부</string>
+	<string name="piri_dialogs_cancel">취소</string>
+	<string name="piri_dialogs_confirm">확인</string>
+	<string name="piri_dialogs_selectColor">색을 선택하세요</string>
+	<string name="piri_dialogs_agree">동의</string>
+	<string name="piri_dialogs_reject">거부</string>
 </resources>
