@@ -1,10 +1,12 @@
 package com.thisispiri.preferences;
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
-import com.thisispiri.fragments.ArgbSelector;
+import com.thisispiri.components.ArgbSelector;
+
 /**Saves the color input by the user in the key.*/
 public class ArgbPreference extends DialogPreference {
 	private ArgbSelector selector;

@@ -1,5 +1,7 @@
 package com.thisispiri.dialogs;
+
 import android.os.Bundle;
+
 /**Have your {@code Activity} implement this interface to receive results from various {@code DialogFragment}s.
  * It is recommended for implementations to put something in the arguments {@code Bundle} to know what {@code DialogFragment} called {@link DialogListener#giveResult}.
  * {@code DialogFragment}s that call {@link DialogListener#giveResult} are recommended to pass the aforementioned arguments {@code Bundle} as the second argument of it.*/

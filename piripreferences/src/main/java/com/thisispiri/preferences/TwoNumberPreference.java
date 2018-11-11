@@ -1,4 +1,5 @@
 package com.thisispiri.preferences;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Locale;
+
 /**Saves two integers. Supply firstKey, firstText, firstDefault, secondKey, secondText, secondDefault in the preference xml instead of the regular attributes.*/
 public class TwoNumberPreference extends DialogPreference {
 	private final int limit;

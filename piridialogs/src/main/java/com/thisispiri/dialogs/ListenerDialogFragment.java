@@ -1,7 +1,9 @@
 package com.thisispiri.dialogs;
+
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Context;
+
 /**The base class for {@code DialogFragment}s using {@link DialogListener}.*/
 public class ListenerDialogFragment extends DialogFragment {
 	private DialogListener listener;

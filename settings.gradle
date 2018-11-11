@@ -1,1 +1,1 @@
-include ':piridialogs', ':pirifragments-release', ':piripreferences'
+include ':piricomponents-release', ':piripreferences', ':piridialogs'

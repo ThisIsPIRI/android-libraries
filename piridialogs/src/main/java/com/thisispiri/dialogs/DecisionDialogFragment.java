@@ -1,9 +1,11 @@
 package com.thisispiri.dialogs;
+
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.app.FragmentManager;
 import android.app.AlertDialog;
+
 /**Shows the string specified by message parameter in {@link DecisionDialogFragment#show} and notifies the {@code Activity} if the user agreed or not through {@link DialogListener#giveResult}.*/
 public class DecisionDialogFragment extends ListenerDialogFragment {
 	private String message;

@@ -1,13 +1,12 @@
 package com.thisispiri.dialogs;
+
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.app.AlertDialog;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import com.thisispiri.fragments.ArgbSelector;
+import com.thisispiri.components.ArgbSelector;
+
 /**Lets the user input a color and gives the color to the {@code Activity} by calling {@link DialogListener#giveResult}. Gives {@code null} if the user cancels.
  * The calling {@code Activity} must implement {@link DialogListener} or it will throw an Exception.
  * Call {@code setArguments()} with a {@code Bundle} that has an int with R.string.piri_dialogs_initialColor as the key to set the initial color.*/

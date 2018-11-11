@@ -1,4 +1,5 @@
 package com.thisispiri.dialogs;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -6,6 +7,7 @@ import android.os.Bundle;
 import android.app.FragmentManager;
 import android.app.AlertDialog;
 import android.widget.EditText;
+
 /**Shows the message specified by the message parameter in {@link EditTextDialogFragment#show} and returns the text the user entered via {@link DialogListener#giveResult}.
  * Also puts the message in the {@code Bundle} to it. Returns null if the user cancels.
  * Supply a {@code String} with resource id R.string.hintArgument to set the hint of the {@code EditText}.*/

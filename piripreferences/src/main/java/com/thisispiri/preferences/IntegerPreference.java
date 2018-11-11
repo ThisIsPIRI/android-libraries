@@ -1,4 +1,5 @@
 package com.thisispiri.preferences;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 import java.util.Locale;
+
 /**Gets an integer from the user using an {@code EditText}.*/
 public class IntegerPreference extends EditTextPreference {
 	private final int limit;
