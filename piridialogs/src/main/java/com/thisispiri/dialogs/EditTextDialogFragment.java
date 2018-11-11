@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.app.FragmentManager;
+import androidx.fragment.app.FragmentManager;
 import android.app.AlertDialog;
 import android.widget.EditText;
 
