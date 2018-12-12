@@ -1,6 +1,6 @@
 # PIRI Android Libraries
 
-ArgbDialogFragment and ArgbPreference need ArgbSelector from [PIRI Fragments](https://github.com/ThisIsPIRI/invisible-android-libraries).
+ArgbDialogFragment and ArgbPreference need ArgbSelector from [PIRI Components](https://github.com/ThisIsPIRI/invisible-android-libraries).
 
 ## PIRI Dialogs
 
