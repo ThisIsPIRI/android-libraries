@@ -13,7 +13,7 @@ import java.util.Locale;
 /**Gets an integer from the user using an {@code EditText}.*/
 public class IntegerPreference extends EditTextPreference {
 	private final int limit;
-	private static final int LIMIT_DIVIDEND = 4;
+	private static final int LIMIT_DIVIDEND = 4; //TODO: Make this editable
 	public IntegerPreference(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		TypedArray array = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.Number, 0, 0);
