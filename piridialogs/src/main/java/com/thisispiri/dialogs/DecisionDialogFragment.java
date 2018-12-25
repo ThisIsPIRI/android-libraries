@@ -1,28 +1,20 @@
 package com.thisispiri.dialogs;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 
-/**Shows the string specified by message parameter in {@link DecisionDialogFragment#show} and notifies the {@code Activity} if the user agreed or not through {@link DialogListener#giveResult}.*/
+/**Shows the string specified by message parameter in {@link DecisionDialogFragment#show} and tells the {@code Activity} if the user agreed or not through {@link DialogListener#giveResult}.*/
 public class DecisionDialogFragment extends ListenerDialogFragment {
 	private String message, positive, negative;
 	@Override public Dialog onCreateDialog(final Bundle savedInstanceState) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		builder.setMessage(message);
+		AlertDialog.Builder builder = getBuilder();
 		if(positive == null) positive = getString(R.string.piri_dialogs_agree);
 		if(negative == null) negative = getString(R.string.piri_dialogs_reject);
 		builder.setPositiveButton(positive, (dialog, id) -> getListener().giveResult(true, getArguments()));
 		builder.setNegativeButton(negative, (dialog, id) -> getListener().giveResult(false, getArguments()));
 		return builder.create();
-	}
-	/**Shows the {@code Dialog} with the message specified by message parameter.
-	 * @param message The {@code String} containing the message.*/
-	public void show(FragmentManager manager, String tag, String message) {
-		this.message = message;
-		show(manager, tag);
 	}
 	/**Shows the {@code Dialog} with the message specified by message parameter.
 	 * You may pass {@code null} to {@code positive} or {@code negative}; they will default to
@@ -31,9 +23,8 @@ public class DecisionDialogFragment extends ListenerDialogFragment {
 	 * @param positive The {@code String} on the button for a positive response.
 	 * @param negative The {@code String} on the button for a negative response.*/
 	public void show(FragmentManager manager, String tag, String message, String positive, String negative) {
-		this.message = message;
 		this.positive = positive;
 		this.negative = negative;
-		show(manager, tag);
+		show(manager, tag, message);
 	}
 }
