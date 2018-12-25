@@ -3,7 +3,6 @@ package com.thisispiri.dialogs;
 import android.app.Dialog;
 import android.os.Bundle;
 import androidx.appcompat.app.AlertDialog;
-import android.view.View;
 import com.thisispiri.components.ArgbSelector;
 
 /**Lets the user input a color and gives the color to the {@code Activity} by calling {@link DialogListener#giveResult}. Gives {@code null} if the user cancels.
@@ -15,9 +14,8 @@ public class ArgbDialogFragment extends ListenerDialogFragment {
 	public AlertDialog.Builder setUpContent() {
 		AlertDialog.Builder builder = getBuilder();
 		builder.setMessage(getString(R.string.piri_dialogs_selectColor));
-		View view = getActivity().getLayoutInflater().inflate(R.layout.piri_dialogs_argb_selector, null);
-		selector = view.findViewById(R.id.piri_dialogs_argbSelector);
-		builder.setView(view);
+		selector = new ArgbSelector(getContext());
+		builder.setView(selector);
 		//Get the default color specified by the arguments
 		int defaultColor = 0;
 		if(getArguments() != null)

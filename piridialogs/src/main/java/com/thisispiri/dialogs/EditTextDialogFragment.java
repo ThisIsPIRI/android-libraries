@@ -12,14 +12,16 @@ import android.widget.EditText;
  * The positive button will have the message as its text.*/
 public class EditTextDialogFragment extends ListenerDialogFragment {
 	private String hint = "";
+	private EditText editText;
 	@Override @SuppressLint("InflateParams")
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 		super.onCreateDialog(savedInstanceState);
 		AlertDialog.Builder builder = getBuilder();
-		builder.setView(getActivity().getLayoutInflater().inflate(R.layout.dialog_edittext, null));
+		editText = new EditText(getContext());
+		builder.setView(editText);
 		builder.setPositiveButton(message, (dialog, id) -> {
 			getArguments().putString(getString(R.string.piri_dialogs_messageArgument), message);
-			getListener().giveResult(((EditText) getDialog().findViewById(R.id.fileName)).getText().toString(), getArguments());
+			getListener().giveResult(editText.getText().toString(), getArguments());
 		});
 		builder.setNegativeButton(R.string.piri_dialogs_cancel, (dialog, id) -> {
 			getArguments().putString(getString(R.string.piri_dialogs_messageArgument), message);
@@ -29,7 +31,7 @@ public class EditTextDialogFragment extends ListenerDialogFragment {
 	}
 	@Override public void onStart() {
 		super.onStart();
-		((EditText) getDialog().findViewById(R.id.fileName)).setHint(hint);
+		editText.setHint(hint);
 	}
 	/**Shows the {@code Dialog} with the message and the hint.
 	 * @param message The {@code String} containing the message.
