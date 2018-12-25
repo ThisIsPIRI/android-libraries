@@ -14,16 +14,8 @@ public class DecisionDialogFragment extends ListenerDialogFragment {
 		builder.setMessage(message);
 		if(positive == null) positive = getString(R.string.piri_dialogs_agree);
 		if(negative == null) negative = getString(R.string.piri_dialogs_reject);
-		builder.setPositiveButton(positive, new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int id) {
-				getListener().giveResult(true, getArguments());
-			}
-		});
-		builder.setNegativeButton(negative, new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int id) {
-				getListener().giveResult(false, getArguments());
-			}
-		});
+		builder.setPositiveButton(positive, (dialog, id) -> getListener().giveResult(true, getArguments()));
+		builder.setNegativeButton(negative, (dialog, id) -> getListener().giveResult(false, getArguments()));
 		return builder.create();
 	}
 	/**Shows the {@code Dialog} with the message specified by message parameter.

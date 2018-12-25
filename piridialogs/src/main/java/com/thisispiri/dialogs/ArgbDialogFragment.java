@@ -30,21 +30,10 @@ public class ArgbDialogFragment extends ListenerDialogFragment {
 	}
 	@Override public Dialog onCreateDialog(final Bundle savedInstanceState) {
 		AlertDialog.Builder builder = setUpContent();
-		builder.setPositiveButton(R.string.piri_dialogs_confirm, new DialogInterface.OnClickListener() {
-			@Override public void onClick(DialogInterface dialog, int id) {
-				getListener().giveResult(selector.getColor(), getArguments());
-			}
-		});
-		builder.setNegativeButton(R.string.piri_dialogs_cancel, new DialogInterface.OnClickListener() {
-			@Override public void onClick(DialogInterface dialog, int id) {
-				getListener().<Integer>giveResult(null, getArguments());
-			}
-		});
+		builder.setPositiveButton(R.string.piri_dialogs_confirm, (dialog, id) -> getListener().giveResult(selector.getColor(), getArguments()));
+		builder.setNegativeButton(R.string.piri_dialogs_cancel, (dialog, id) -> getListener().<Integer>giveResult(null, getArguments()));
 		return builder.create();
 	}
-	/*@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return new LinearLayout(getActivity());
-	}*/
 	public int getColor() {return selector.getColor();}
 	public void setColor(int color) {selector.setColor(color);}
 }

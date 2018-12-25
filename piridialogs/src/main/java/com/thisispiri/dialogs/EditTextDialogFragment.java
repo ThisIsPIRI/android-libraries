@@ -19,19 +19,19 @@ public class EditTextDialogFragment extends ListenerDialogFragment {
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		builder.setView(getActivity().getLayoutInflater().inflate(R.layout.dialog_edittext, null));
 		builder.setMessage(message);
-		builder.setPositiveButton(message, new DialogInterface.OnClickListener() {public void onClick(DialogInterface dialog, int id) {
+		builder.setPositiveButton(message, (dialog, id) -> {
 			getArguments().putString(getString(R.string.piri_dialogs_messageArgument), message);
-			getListener().giveResult(((EditText) ((AlertDialog) getDialog()).findViewById(R.id.fileName)).getText().toString(), getArguments());
-		}});
-		builder.setNegativeButton(R.string.piri_dialogs_cancel, new DialogInterface.OnClickListener() { public void onClick(DialogInterface dialog, int id) {
+			getListener().giveResult(((EditText) getDialog().findViewById(R.id.fileName)).getText().toString(), getArguments());
+		});
+		builder.setNegativeButton(R.string.piri_dialogs_cancel, (dialog, id) -> {
 			getArguments().putString(getString(R.string.piri_dialogs_messageArgument), message);
 			getListener().giveResult(null, getArguments());
-		} });
+		});
 		return builder.create();
 	}
 	@Override public void onStart() {
 		super.onStart();
-		((EditText) ((AlertDialog) getDialog()).findViewById(R.id.fileName)).setHint(hint);
+		((EditText) getDialog().findViewById(R.id.fileName)).setHint(hint);
 	}
 	/**Same as {@link EditTextDialogFragment#show(FragmentManager, String, String, String)}, but without the hint.
 	 * @param message The {@code String} containing the message.*/
