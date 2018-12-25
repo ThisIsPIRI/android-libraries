@@ -11,9 +11,5 @@ public class ListenerDialogFragment extends DialogFragment {
 		super.onAttach(context);
 		listener = (DialogListener) context;
 	}
-	@Override public void onAttach(final Activity activity) { //Backward compatibility with API levels under 23
-		super.onAttach(activity);
-		listener = (DialogListener) activity;
-	}
 	protected DialogListener getListener() {return listener;}
 }

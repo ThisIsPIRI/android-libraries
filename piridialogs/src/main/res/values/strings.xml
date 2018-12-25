@@ -3,7 +3,6 @@
 	<string name="piri_dialogs_selectColor">Select color</string>
 	<string name="piri_dialogs_confirm">Confirm</string>
 	<string name="piri_dialogs_cancel">Cancel</string>
-	<string name="piri_dialogs_requestCode" translatable="false">requestCode</string>
 	<string name="piri_dialogs_initialColor" translatable="false">initialColor</string>
 	<string name="piri_dialogs_agree">Agree</string>
 	<string name="piri_dialogs_reject">Reject</string>
