@@ -10,9 +10,11 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
 /**Shows multiple {@code CheckBox}s with questions supplied in {@link ChecksDialogFragment#show(FragmentManager, String, String, String[])}.
- * Gives a {@code boolean[]} containing whether the boxes were checked as result. It will be {@code null} if the user cancels.*/
+ * Gives a {@code boolean[]} containing whether the boxes were checked as the result, in the same order as your supplied questions.
+ * The result will be {@code null} if the user cancels.*/
 public class ChecksDialogFragment extends ListenerDialogFragment {
 	private String[] questions;
+	private int[] questionIds;
 	private CheckBox[] boxes;
 	private LinearLayout layout;
 	@Override @SuppressLint("InflateParams")
@@ -33,6 +35,11 @@ public class ChecksDialogFragment extends ListenerDialogFragment {
 	}
 	@Override public void onStart() {
 		super.onStart();
+		if(questions == null) {
+			questions = new String[questionIds.length];
+			for(int i = 0;i < questions.length;i++)
+				questions[i] = getString(questionIds[i]);
+		}
 		boxes = new CheckBox[questions.length];
 		for(int i = 0;i < questions.length;i++) {
 			boxes[i] = new CheckBox(getContext());
@@ -50,9 +57,7 @@ public class ChecksDialogFragment extends ListenerDialogFragment {
 	/**Shows the {@code Dialog}.
 	 * @param questionIds The resource IDs for the questions.*/
 	public void show(FragmentManager manager, String tag, String message, int[] questionIds) {
-		String[] questions = new String[questionIds.length];
-		for(int i = 0;i < questions.length;i++)
-			questions[i] = getResources().getString(questionIds[i]);
-		show(manager, tag, message, questions);
+		this.questionIds = questionIds;
+		show(manager, tag, message);
 	}
 }

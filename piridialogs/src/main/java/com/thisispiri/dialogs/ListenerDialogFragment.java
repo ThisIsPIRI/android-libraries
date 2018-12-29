@@ -15,7 +15,7 @@ public class ListenerDialogFragment extends DialogFragment {
 		listener = (DialogListener) context;
 	}
 	public DialogListener getListener() {return listener;}
-	/**Shows the Dialog with the {@code message}.*/
+	/**Shows the Dialog with the {@code message}. Overriding {@link ListenerDialogFragment#show(FragmentManager, String)} has no effect on this method.*/
 	public void show(FragmentManager manager, String tag, String message) {
 		this.message = message;
 		super.show(manager, tag);
