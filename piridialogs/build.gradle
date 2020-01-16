@@ -23,9 +23,10 @@ android {
 
 dependencies {
 	implementation project(':piricomponents-release')
+	//Don't use below for AARs. R.txt and other resources will be saved twice in the output AAR as of 4353-01.
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
-	implementation 'androidx.appcompat:appcompat:1.0.2'
+	implementation 'androidx.appcompat:appcompat:1.1.0'
 	testImplementation 'junit:junit:4.12'
-	androidTestImplementation 'androidx.test:runner:1.1.1'
-	androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+	androidTestImplementation 'androidx.test:runner:1.2.0'
+	androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

@@ -1,1 +1,1 @@
-include ':piricomponents-release', ':piripreferences', ':piridialogs'
+include ':piripreferences', ':piridialogs', ':piriandroidcommons', ':piricomponents-release'
