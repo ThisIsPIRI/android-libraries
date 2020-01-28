@@ -16,17 +16,17 @@ import java.io.File;
 import java.io.IOException;
 
 public class AndrUtil {
-	/**Obtains a `File` called `fileName` from `directoryName` under the external storage.
-	 * @param directoryName The name of the directory, right under the external storage.
+	/**Obtains a {@code File} called {@code fileName} from {@code directoryName} under the external storage.
+	 * @param directoryName The name of the directory, right under the external storage. Subdirectories are supported.
 	 * @param fileName The filename of the file to obtain.
-	 * @param allowCreation If `true`, will create a new, empty file in case a file called `fileName` doesn't exist.*/
+	 * @param allowCreation If true, will create a new, empty file in case a file called {@code fileName} doesn't exist.*/
 	public static File getFile(String directoryName, String fileName, boolean allowCreation) throws IOException {
 		if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
 			throw new IOException("External storage not mounted");
 		}
-		File directory = Environment.getExternalStoragePublicDirectory(directoryName);
-		File file = new File(directory, fileName);
-		if (!directory.exists() && !directory.mkdir()) {
+		final File directory = Environment.getExternalStoragePublicDirectory(directoryName);
+		final File file = new File(directory, fileName);
+		if (!directory.exists() && !directory.mkdirs()) {
 			throw new IOException("Couldn't find or make requested directory");
 		}
 		if (!file.exists()) {
