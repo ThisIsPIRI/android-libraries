@@ -51,7 +51,7 @@ public class TwoNumberPreference extends DialogPreference {
 			StringBuilder builder = new StringBuilder();
 			SharedPreferences.Editor editor = getSharedPreferences().edit();
 			try {
-				int value1 = Integer.valueOf(firstEdit.getText().toString());
+				int value1 = Integer.parseInt(firstEdit.getText().toString());
 				if(value1 < 1 || value1 > limit) throw new NumberFormatException();
 				editor.putInt(firstKey, value1);
 			}
@@ -59,7 +59,7 @@ public class TwoNumberPreference extends DialogPreference {
 				builder.append(firstText).append(", ");
 			}
 			try {
-				int value2 = Integer.valueOf(secondEdit.getText().toString());
+				int value2 = Integer.parseInt(secondEdit.getText().toString());
 				if(value2 < 1 || value2 > limit) throw new NumberFormatException();
 				editor.putInt(secondKey, value2);
 			}

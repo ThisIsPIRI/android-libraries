@@ -2,7 +2,16 @@
 <resources>
 	<string name="piri_dialogs_cancel">취소</string>
 	<string name="piri_dialogs_confirm">확인</string>
-	<string name="piri_dialogs_selectColor">색을 선택하세요</string>
+	<string name="piri_dialogs_selectColor">빛깔을 고르세요</string>
 	<string name="piri_dialogs_agree">동의</string>
 	<string name="piri_dialogs_reject">거부</string>
+	<string name="piri_dialogs_asTheServer">먼저 두기</string>
+	<string name="piri_dialogs_asTheClient">뒤에 두기</string>
+	<string name="piri_dialogs_connect">잇기</string>
+	<string name="piri_dialogs_multiplayerOnLan">랜으로 같이하기</string>
+	<string name="piri_dialogs_enter_ip">맞은편의 장치에 보이는 글을 그대로 넣으세요</string>
+	<string name="piri_dialogs_noWifiSupport">이 장치는 와이파이를 지원하지 않습니다</string>
+	<string name="piri_dialogs_pleaseEnableWifi">와이파이를 켜 주세요</string>
+	<string name="piri_dialogs_pleaseConnectAp">와이파이를 이어 주세요</string>
+	<string name="piri_dialogs_pleaseCheckWifiConnection">와이파이가 제대로 이어졌는지 봐 주세요</string>
 </resources>

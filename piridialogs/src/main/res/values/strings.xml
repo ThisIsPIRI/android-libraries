@@ -6,4 +6,13 @@
 	<string name="piri_dialogs_initialColor" translatable="false">initialColor</string>
 	<string name="piri_dialogs_agree">Agree</string>
 	<string name="piri_dialogs_reject">Reject</string>
+	<string name="piri_dialogs_asTheServer">Play first</string>
+	<string name="piri_dialogs_asTheClient">Play second</string>
+	<string name="piri_dialogs_connect">Connect</string>
+	<string name="piri_dialogs_multiplayerOnLan">Multiplyer on LAN</string>
+	<string name="piri_dialogs_enter_ip">Enter the exact text shown on the other device</string>
+	<string name="piri_dialogs_noWifiSupport">This device doesn\'t support Wi-Fi</string>
+	<string name="piri_dialogs_pleaseEnableWifi">Please enable Wi-Fi</string>
+	<string name="piri_dialogs_pleaseConnectAp">Please connect to a Wi-Fi access point</string>
+	<string name="piri_dialogs_pleaseCheckWifiConnection">Please check your Wi-Fi connection.</string>
 </resources>

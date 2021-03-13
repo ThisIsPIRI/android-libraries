@@ -1,4 +1,3 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.thisispiri.dialogs">
-	<application android:allowBackup="true" android:supportsRtl="true"/>
 </manifest>

@@ -5,4 +5,6 @@
 	<string name="piri_dialogs_messageArgument" translatable="false">messageArgument</string>
 	<public name="piri_dialogs_hintArgument" type="string"/>
 	<string name="piri_dialogs_hintArgument" translatable="false">hintArgument</string>
+	<public name="piri_dialogs_isServer" type="string"/>
+	<string name="piri_dialogs_isServer" translatable="false">isServer</string>
 </resources>

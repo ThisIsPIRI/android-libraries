@@ -41,11 +41,7 @@ public class AndrUtil {
 	 * @param length The length of the `Toast`. Must either be `Toast.LENGTH_SHORT` or `Toast.LENGTH_LONG`. Defaults to `LENGTH_SHORT`.*/
 	public static void showToast(Activity inActivity, String saying, int length) {
 		if (Looper.myLooper() != Looper.getMainLooper())
-			inActivity.runOnUiThread(new Runnable() {
-				@Override public void run() {
-					AndrUtil.showToast(inActivity, saying);
-				}
-			});
+			inActivity.runOnUiThread(() -> AndrUtil.showToast(inActivity, saying));
 		else
 			Toast.makeText(inActivity, saying, length).show();
 	}

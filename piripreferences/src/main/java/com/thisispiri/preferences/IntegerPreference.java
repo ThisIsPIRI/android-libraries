@@ -44,7 +44,7 @@ public class IntegerPreference extends EditTextPreference {
 	@Override public void setText(String text) {
 		//do not call the superclass' method as it persists a string.
 		try {
-			setValue(Integer.valueOf(text));
+			setValue(Integer.parseInt(text));
 		}
 		catch (NumberFormatException e) {
 			Toast.makeText(getContext(), String.format(Locale.getDefault(), getContext().getString(R.string.naturalNumberSmallerThan), getTitle(), limit), Toast.LENGTH_SHORT).show();
