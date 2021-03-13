@@ -40,7 +40,7 @@
 		android:orientation="horizontal">
 		<Button
 			android:id="@+id/piri_dialogs_connectButton"
-			android:text="@string/piri_dialogs_connect"
+			android:text="@string/piri_dialogs_connectFirst"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content" />
 		<ProgressBar

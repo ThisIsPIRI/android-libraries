@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.text.format.Formatter;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
@@ -33,6 +34,7 @@ public class IpConnectDialogFragment extends ListenerDialogFragment {
 	private RadioButton radioClient;
 	private EditText ipEditText;
 	private ProgressBar progressBar;
+	private Button connectButton;
 	private Thread runningThread;
 	private String isServerString;
 	private WifiManager wifi;
@@ -56,7 +58,8 @@ public class IpConnectDialogFragment extends ListenerDialogFragment {
 		radioClient = view.findViewById(R.id.piri_dialogs_connectRadioClient);
 		ipEditText = view.findViewById(R.id.piri_dialogs_connectIpEditText);
 		progressBar = view.findViewById(R.id.piri_dialogs_connectProgress);
-		view.findViewById(R.id.piri_dialogs_connectButton).setOnClickListener(new ConnectButtonListener());
+		connectButton = view.findViewById(R.id.piri_dialogs_connectButton);
+		connectButton.setOnClickListener(new ConnectButtonListener());
 		((RadioGroup)view.findViewById(R.id.piri_dialogs_connectRadioMethod)).setOnCheckedChangeListener(new RadioListener());
 		Dialog dialog = builder.create();
 		dialog.setCanceledOnTouchOutside(false);
@@ -94,11 +97,13 @@ public class IpConnectDialogFragment extends ListenerDialogFragment {
 				ipEditText.setFocusable(false);
 				ipEditText.setFocusableInTouchMode(false);
 				ipEditText.clearFocus();
+				connectButton.setText(R.string.piri_dialogs_connectFirst);
 			}
 			else if(checkedRadioButtonId == R.id.piri_dialogs_connectRadioClient) {
 				ipEditText.setText("");
 				ipEditText.setFocusable(true);
 				ipEditText.setFocusableInTouchMode(true);
+				connectButton.setText(R.string.piri_dialogs_connectSecond);
 			}
 			progressBar.setVisibility(View.GONE);
 		}
