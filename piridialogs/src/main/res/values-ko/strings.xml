@@ -9,7 +9,7 @@
 	<string name="piri_dialogs_asTheClient">뒤에 두기</string>
 	<string name="piri_dialogs_connectFirst">잇기(먼저 누르세요)</string>
 	<string name="piri_dialogs_connectSecond">잇기(뒤에 누르세요)</string>
-	<string name="piri_dialogs_multiplayerOnLan">랜으로 같이하기</string>
+	<string name="piri_dialogs_multiplayerOnLan">울안(랜)으로 같이하기</string>
 	<string name="piri_dialogs_enter_ip">맞은편의 장치에 보이는 글을 그대로 넣으세요</string>
 	<string name="piri_dialogs_noWifiSupport">이 장치는 와이파이를 지원하지 않습니다</string>
 	<string name="piri_dialogs_pleaseEnableWifi">와이파이를 켜 주세요</string>

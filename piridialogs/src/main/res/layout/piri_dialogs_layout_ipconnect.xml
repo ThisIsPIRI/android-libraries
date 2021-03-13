@@ -24,7 +24,7 @@
 	<!--TODO: IPv6 support-->
 	<EditText
 		android:id="@+id/piri_dialogs_connectIpEditText"
-		android:inputType="number"
+		android:inputType="numberDecimal"
 		android:digits="0123456789."
 		android:hint="@string/piri_dialogs_enter_ip"
 		android:importantForAutofill="no"

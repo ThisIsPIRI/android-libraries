@@ -120,7 +120,7 @@ public class IpConnectDialogFragment extends ListenerDialogFragment {
 						dismiss();
 					}
 					catch(IOException e) {
-						giveSocket(null, false);
+						//If this is thrown, socket will be null. No need to try to close it here.
 						getActivity().runOnUiThread(() -> {
 							Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
 							progressBar.setVisibility(View.GONE);
